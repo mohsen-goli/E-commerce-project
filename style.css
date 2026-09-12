@@ -74,9 +74,17 @@ button {
 
 .product-card {
   background: white;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 12px;
   text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .product-card h3 {
@@ -85,6 +93,7 @@ button {
 
 .product-card p {
   margin-bottom: 20px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -94,4 +103,15 @@ footer {
   background: #111;
   color: white;
   margin-top: 40px;
+}
+.product-image {
+  height: 200px;
+  background: #eaeaea;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 14px;
 }
