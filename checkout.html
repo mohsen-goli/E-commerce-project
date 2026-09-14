@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="NovaTech checkout - Complete your order."
+    />
+
+    <title>NovaTech | Checkout</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo"> Nova<span>Tech</span> </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="cart.html" class="cart-button" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Checkout Page -->
+      <section class="checkout-page">
+        <div class="container">
+          <div class="checkout-heading">
+            <p class="section-label">SECURE CHECKOUT</p>
+
+            <h1>Complete Your Order</h1>
+
+            <p>Enter your information below to complete your purchase.</p>
+          </div>
+
+          <div class="checkout-layout">
+            <!-- Customer Information -->
+            <div class="checkout-form-wrapper">
+              <form class="checkout-form" id="checkout-form">
+                <div class="checkout-form-section">
+                  <p class="checkout-section-label">CONTACT INFORMATION</p>
+
+                  <h2>Customer Details</h2>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="first-name"> First Name </label>
+
+                      <input
+                        type="text"
+                        id="first-name"
+                        name="firstName"
+                        placeholder="John"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="last-name"> Last Name </label>
+
+                      <input
+                        type="text"
+                        id="last-name"
+                        name="lastName"
+                        placeholder="Doe"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email"> Email Address </label>
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="john@example.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone"> Phone Number </label>
+
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="+1 234 567 890"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="checkout-form-section">
+                  <p class="checkout-section-label">SHIPPING INFORMATION</p>
+
+                  <h2>Delivery Address</h2>
+
+                  <div class="form-group">
+                    <label for="address"> Street Address </label>
+
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="123 Main Street"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="city"> City </label>
+
+                      <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="New York"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="postal-code"> Postal Code </label>
+
+                      <input
+                        type="text"
+                        id="postal-code"
+                        name="postalCode"
+                        placeholder="10001"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="country"> Country </label>
+
+                    <select id="country" name="country" required>
+                      <option value="">Select Country</option>
+
+                      <option value="United States">United States</option>
+
+                      <option value="Canada">Canada</option>
+
+                      <option value="United Kingdom">United Kingdom</option>
+
+                      <option value="Germany">Germany</option>
+
+                      <option value="France">France</option>
+
+                      <option value="Netherlands">Netherlands</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="checkout-form-section">
+                  <p class="checkout-section-label">PAYMENT</p>
+
+                  <h2>Payment Method</h2>
+
+                  <div class="payment-option">
+                    <input
+                      type="radio"
+                      id="card-payment"
+                      name="payment"
+                      value="card"
+                      checked
+                    />
+
+                    <label for="card-payment">
+                      <span>
+                        <strong>Credit / Debit Card</strong>
+                        <small> Secure card payment </small>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="payment-option">
+                    <input
+                      type="radio"
+                      id="cash-payment"
+                      name="payment"
+                      value="cash"
+                    />
+
+                    <label for="cash-payment">
+                      <span>
+                        <strong>Cash on Delivery</strong>
+                        <small> Pay when your order arrives </small>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="place-order-button">
+                  Place Order
+                </button>
+              </form>
+            </div>
+
+            <!-- Order Summary -->
+            <aside class="checkout-summary">
+              <p class="cart-summary-label">YOUR ORDER</p>
+
+              <h2>Order Summary</h2>
+
+              <div class="checkout-items">
+                <!-- Products rendered with JavaScript -->
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-row">
+                <span>Subtotal</span>
+
+                <strong class="checkout-subtotal"> $0 </strong>
+              </div>
+
+              <div class="summary-row">
+                <span>Shipping</span>
+
+                <strong>Free</strong>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-total">
+                <span>Total</span>
+
+                <strong class="checkout-total"> $0 </strong>
+              </div>
+
+              <a href="cart.html" class="back-to-cart"> ← Back to Cart </a>
+            </aside>
+          </div>
+
+          <!-- Order Confirmation -->
+          <div class="order-confirmation" id="order-confirmation" hidden>
+            <div class="confirmation-icon">✓</div>
+
+            <p class="section-label">ORDER CONFIRMED</p>
+
+            <h2>Thank You For Your Order!</h2>
+
+            <p>
+              Your order has been successfully placed. This is a demo checkout
+              for the NovaTech frontend project.
+            </p>
+
+            <a href="index.html" class="primary-button"> Continue Shopping </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© 2026 NovaTech. All rights reserved.</p>
+
+          <p>Built with HTML, CSS & JavaScript.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

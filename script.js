@@ -243,11 +243,6 @@ if (productsGrid) {
     saveCart();
     updateCartCount();
 
-    /*
-      Cart does NOT open automatically.
-      The user opens it by clicking the cart icon.
-    */
-
     const button = event.target;
 
     const originalText = button.textContent;
@@ -397,13 +392,9 @@ if (cartPageItems) {
       return;
     }
 
-    /* Increase */
-
     if (event.target.classList.contains("increase")) {
       item.quantity += 1;
     }
-
-    /* Decrease */
 
     if (event.target.classList.contains("decrease")) {
       item.quantity -= 1;
@@ -414,8 +405,6 @@ if (cartPageItems) {
         });
       }
     }
-
-    /* Remove */
 
     if (event.target.classList.contains("remove-item")) {
       cart = cart.filter((cartItem) => {
@@ -452,6 +441,140 @@ function updateCartSummary() {
    Checkout
 ========================= */
 
+const checkoutItems = document.querySelector(".checkout-items");
+const checkoutSubtotal = document.querySelector(".checkout-subtotal");
+const checkoutTotal = document.querySelector(".checkout-total");
+const checkoutForm = document.querySelector("#checkout-form");
+const orderConfirmation = document.querySelector("#order-confirmation");
+
+function renderCheckout() {
+  if (!checkoutItems) {
+    return;
+  }
+
+  checkoutItems.innerHTML = "";
+
+  if (cart.length === 0) {
+    checkoutItems.innerHTML = `
+      <div class="empty-checkout">
+        <p>Your cart is empty.</p>
+
+        <a href="index.html#products">
+          Start Shopping
+        </a>
+      </div>
+    `;
+
+    if (checkoutSubtotal) {
+      checkoutSubtotal.textContent = "$0";
+    }
+
+    if (checkoutTotal) {
+      checkoutTotal.textContent = "$0";
+    }
+
+    if (checkoutForm) {
+      checkoutForm.style.display = "none";
+    }
+
+    return;
+  }
+
+  cart.forEach((item) => {
+    const checkoutItem = document.createElement("div");
+
+    checkoutItem.className = "checkout-item";
+
+    checkoutItem.innerHTML = `
+      <div class="checkout-item-image">
+        <img
+          src="${item.image}"
+          alt="${item.name}"
+        >
+      </div>
+
+      <div class="checkout-item-info">
+        <div>
+          <h3>${item.name}</h3>
+
+          <p>
+            Qty: ${item.quantity}
+          </p>
+        </div>
+
+        <strong>
+          $${item.price * item.quantity}
+        </strong>
+      </div>
+    `;
+
+    checkoutItems.appendChild(checkoutItem);
+  });
+
+  const total = getCartTotal();
+
+  if (checkoutSubtotal) {
+    checkoutSubtotal.textContent = `$${total}`;
+  }
+
+  if (checkoutTotal) {
+    checkoutTotal.textContent = `$${total}`;
+  }
+}
+
+/* =========================
+   Place Order
+========================= */
+
+if (checkoutForm) {
+  checkoutForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (cart.length === 0) {
+      alert("Your cart is empty.");
+      return;
+    }
+
+    const formData = new FormData(checkoutForm);
+
+    const customer = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      address: formData.get("address"),
+      city: formData.get("city"),
+      postalCode: formData.get("postalCode"),
+      country: formData.get("country"),
+      payment: formData.get("payment"),
+    };
+
+    console.log("Customer:", customer);
+    console.log("Order:", cart);
+    console.log("Total:", getCartTotal());
+
+    checkoutForm.style.display = "none";
+
+    if (orderConfirmation) {
+      orderConfirmation.hidden = false;
+    }
+
+    cart = [];
+
+    saveCart();
+    updateCartCount();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
+
+/* =========================
+   Checkout Button From Cart
+========================= */
+
 const checkoutButton = document.querySelector(".cart-checkout-button");
 
 if (checkoutButton) {
@@ -461,7 +584,7 @@ if (checkoutButton) {
       return;
     }
 
-    alert("Checkout page coming soon.");
+    window.location.href = "checkout.html";
   });
 }
 
@@ -471,3 +594,4 @@ if (checkoutButton) {
 
 updateCartCount();
 renderCartPage();
+renderCheckout();
