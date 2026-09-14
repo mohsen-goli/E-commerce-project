@@ -87,6 +87,11 @@ const products = [
 
 const productsGrid = document.querySelector(".product-container");
 const searchInput = document.querySelector(".search-input");
+const categoryFilter = document.querySelector(".category-filter");
+const cartCount = document.querySelector(".cart-count");
+
+let cart = [];
+
 function renderProducts(productsToRender) {
   productsGrid.innerHTML = "";
 
@@ -116,12 +121,39 @@ function renderProducts(productsToRender) {
 }
 
 renderProducts(products);
-searchInput.addEventListener("input", () => {
-  const searchTerm = searchInput.value.toLowerCase();
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm),
-  );
+function filterProducts() {
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  const selectedCategory = categoryFilter.value;
+
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch =
+      product.name.toLowerCase().includes(searchTerm) ||
+      product.category.toLowerCase().includes(searchTerm);
+
+    const matchesCategory =
+      selectedCategory === "all" || product.category === selectedCategory;
+
+    return matchesSearch && matchesCategory;
+  });
 
   renderProducts(filteredProducts);
+}
+
+searchInput.addEventListener("input", filterProducts);
+
+categoryFilter.addEventListener("change", filterProducts);
+
+productsGrid.addEventListener("click", (event) => {
+  if (!event.target.classList.contains("add-to-cart")) {
+    return;
+  }
+
+  const productId = Number(event.target.dataset.id);
+
+  const product = products.find((product) => product.id === productId);
+
+  cart.push(product);
+
+  cartCount.textContent = cart.length;
 });
