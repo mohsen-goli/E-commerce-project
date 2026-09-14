@@ -4,71 +4,300 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>E-commerce Store</title>
+    <meta
+      name="description"
+      content="NovaTech - Modern digital accessories and technology products."
+    />
+
+    <title>NovaTech | Digital Store</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
-      <nav>
-        <h1>My Store</h1>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#" class="logo"> Nova<span>Tech</span> </a>
 
-        <ul>
+        <ul class="nav-links">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <div class="nav-actions">
+          <button class="search-button" aria-label="Search">🔎</button>
+
+          <button class="cart-button" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count">0</span>
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section class="hero">
-        <h2>Welcome to My Store</h2>
-        <p>Discover our latest products.</p>
-        <button>Shop Now</button>
+        <div class="hero-content container">
+          <div class="hero-text">
+            <p class="hero-label">SMART TECH. SIMPLE LIFE.</p>
+
+            <h1>
+              Technology that
+              <span>fits your life.</span>
+            </h1>
+
+            <p class="hero-description">
+              Discover modern digital accessories designed to make your everyday
+              life smarter, easier, and better.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#products" class="primary-button"> Shop Now </a>
+
+              <a href="#products" class="secondary-button">
+                Explore Products
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card">
+              <span>TECH</span>
+              <strong>FUTURE</strong>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="products">
-        <h2>Featured Products</h2>
+      <!-- Products Section -->
+      <section class="products" id="products">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">OUR COLLECTION</p>
 
-        <div class="product-container">
-          <article class="product-card">
-            <div class="product-image">
-              <span>Product Image</span>
-            </div>
+            <h2>Featured Products</h2>
 
-            <h3>Wireless Headphones</h3>
-            <p>$49</p>
-            <button>Add to Cart</button>
-          </article>
+            <p>Explore our selection of modern technology essentials.</p>
+          </div>
 
-          <article class="product-card">
-            <div class="product-image">
-              <span>Product Image</span>
-            </div>
+          <div class="product-container">
+            <!-- Product 1 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/headphones.jpg" alt="Wireless Headphones" />
+              </div>
 
-            <h3>Smart Watch</h3>
-            <p>$79</p>
-            <button>Add to Cart</button>
-          </article>
+              <div class="product-info">
+                <p class="product-category">Audio</p>
 
-          <article class="product-card">
-            <div class="product-image">
-              <span>Product Image</span>
-            </div>
+                <h3>Wireless Headphones</h3>
 
-            <h3>Running Shoes</h3>
-            <p>$99</p>
-            <button>Add to Cart</button>
-          </article>
+                <p class="product-price">$49</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/smartwatch.jpg" alt="Smart Watch" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Wearables</p>
+
+                <h3>Smart Watch</h3>
+
+                <p class="product-price">$79</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/mouse.jpg" alt="Wireless Mouse" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Computer</p>
+
+                <h3>Wireless Mouse</h3>
+
+                <p class="product-price">$39</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/keyboard.jpg" alt="Mechanical Keyboard" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Computer</p>
+
+                <h3>Mechanical Keyboard</h3>
+
+                <p class="product-price">$89</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/speaker.jpg" alt="Bluetooth Speaker" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Audio</p>
+
+                <h3>Bluetooth Speaker</h3>
+
+                <p class="product-price">$59</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/desktop.jpg" alt="Desktop Computer" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Computer</p>
+
+                <h3>Desktop Computer</h3>
+
+                <p class="product-price">$799</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 7 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/powerbank.jpg" alt="Power Bank" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Accessories</p>
+
+                <h3>Power Bank</h3>
+
+                <p class="product-price">$29</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 8 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/usbc-hub.jpg" alt="USB-C Hub" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Accessories</p>
+
+                <h3>USB-C Hub</h3>
+
+                <p class="product-price">$45</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 9 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/game-console.jpg" alt="Game Console" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Gaming</p>
+
+                <h3>Game Console</h3>
+
+                <p class="product-price">$399</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 10 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/laptop-stand.jpg" alt="Laptop Stand" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Computer</p>
+
+                <h3>Laptop Stand</h3>
+
+                <p class="product-price">$35</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 11 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/monitor.jpg" alt="Computer Monitor" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Computer</p>
+
+                <h3>Computer Monitor</h3>
+
+                <p class="product-price">$249</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 12 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/backpack.jpg" alt="Laptop Backpack" />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Accessories</p>
+
+                <h3>Laptop Backpack</h3>
+
+                <p class="product-price">$69</p>
+
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>© 2026 My Store</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 NovaTech. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
