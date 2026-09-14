@@ -85,8 +85,8 @@ const products = [
   },
 ];
 
-const productsGrid = document.querySelector(".products-grid");
-
+const productsGrid = document.querySelector(".product-container");
+const searchInput = document.querySelector(".search-input");
 function renderProducts(productsToRender) {
   productsGrid.innerHTML = "";
 
@@ -116,3 +116,12 @@ function renderProducts(productsToRender) {
 }
 
 renderProducts(products);
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm),
+  );
+
+  renderProducts(filteredProducts);
+});
