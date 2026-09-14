@@ -18,10 +18,10 @@
     <!-- Header -->
     <header class="header">
       <nav class="navbar container">
-        <a href="#" class="logo"> Nova<span>Tech</span> </a>
+        <a href="index.html" class="logo"> Nova<span>Tech</span> </a>
 
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -34,10 +34,10 @@
             placeholder="Search products..."
           />
 
-          <button class="cart-button" aria-label="Shopping cart">
+          <a href="cart.html" class="cart-button" aria-label="Shopping cart">
             🛒
             <span class="cart-count">0</span>
-          </button>
+          </a>
         </div>
       </nav>
     </header>
@@ -45,6 +45,8 @@
     <main>
       <!-- Hero Section -->
       <section class="hero">
+        <div class="hero-overlay"></div>
+
         <div class="hero-content container">
           <div class="hero-text">
             <p class="hero-label">SMART TECH. SIMPLE LIFE.</p>
@@ -60,18 +62,9 @@
             </p>
 
             <div class="hero-actions">
-              <a href="#products" class="primary-button">Shop Now</a>
+              <a href="#products" class="primary-button"> Shop Now </a>
 
-              <a href="#products" class="secondary-button">
-                Explore Products
-              </a>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="hero-card">
-              <span>TECH</span>
-              <strong>FUTURE</strong>
+              <a href="#about" class="secondary-button"> Discover NovaTech </a>
             </div>
           </div>
         </div>
@@ -102,42 +95,96 @@
           </div>
         </div>
       </section>
+
+      <!-- About Section -->
+      <section class="about-section" id="about">
+        <div class="container about-content">
+          <div>
+            <p class="section-label">ABOUT NOVATECH</p>
+
+            <h2>Technology made simple.</h2>
+          </div>
+
+          <p>
+            NovaTech brings together modern technology products and everyday
+            digital essentials in one clean and simple shopping experience. Our
+            goal is to make choosing the right technology easier.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="container contact-content">
+          <p class="section-label">GET IN TOUCH</p>
+
+          <h2>Have a question?</h2>
+
+          <p>
+            We're here to help you find the right technology for your needs.
+          </p>
+
+          <a href="mailto:hello@novatech.com" class="primary-button">
+            Contact Us
+          </a>
+        </div>
+      </section>
     </main>
-
-    <!-- Cart Overlay -->
-    <div class="cart-overlay"></div>
-
-    <!-- Cart Panel -->
-    <aside class="cart-panel">
-      <div class="cart-header">
-        <div>
-          <p class="cart-label">YOUR BAG</p>
-          <h2>Shopping Cart</h2>
-        </div>
-
-        <button class="cart-close" aria-label="Close shopping cart">
-          &times;
-        </button>
-      </div>
-
-      <div class="cart-items">
-        <!-- Cart items will be rendered with JavaScript -->
-      </div>
-
-      <div class="cart-footer">
-        <div class="cart-total">
-          <span>Total</span>
-          <span class="cart-total-price">$0</span>
-        </div>
-
-        <button class="checkout-button">Checkout</button>
-      </div>
-    </aside>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>© 2026 NovaTech. All rights reserved.</p>
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="index.html" class="logo"> Nova<span>Tech</span> </a>
+
+            <p>Modern technology for modern life.</p>
+          </div>
+
+          <!-- Shop -->
+          <div class="footer-column">
+            <h3>Shop</h3>
+
+            <ul>
+              <li><a href="#products">All Products</a></li>
+              <li><a href="#products">Audio</a></li>
+              <li><a href="#products">Computer</a></li>
+              <li><a href="#products">Accessories</a></li>
+              <li><a href="#products">Gaming</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-column">
+            <h3>Company</h3>
+
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="footer-column">
+            <h3>Support</h3>
+
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 NovaTech. All rights reserved.</p>
+
+          <p>Built with HTML, CSS & JavaScript.</p>
+        </div>
       </div>
     </footer>
 
