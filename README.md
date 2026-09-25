@@ -1,74 +1,81 @@
 # NovaTech — E-commerce Website
 
-A responsive e-commerce website built with **HTML, CSS and JavaScript**, featuring dynamic product rendering, search, shopping cart functionality and a complete checkout flow.
+A responsive e-commerce website for digital accessories and technology products, built with **HTML, CSS, and JavaScript**.
 
-The project was built to simulate a real-world online store for digital accessories and technology products.
+The project focuses on building a realistic frontend shopping experience with dynamic product rendering, search, cart management, and a multi-step checkout flow.
+
+## 🚀 Live Demo
+
+**[View Live Demo](https://e-commerce-project-theta-kohl.vercel.app/)**
 
 ## ✨ Features
 
-* 🛍️ Dynamic product listing
-* 🔎 Product search
-* 🛒 Shopping cart
-* ➕ Add products to cart
-* ➖ Update product quantities
-* 💰 Dynamic cart total
-* 🧾 Complete checkout flow
-* 📱 Responsive design
-* 💻 Technology-focused product interface
-* 📦 Product data rendered dynamically with JavaScript
+- 🛍️ Dynamic product rendering
+- 🔎 Product search
+- 🛒 Shopping cart
+- ➕ Add products to cart
+- ➖ Update product quantities
+- 🗑️ Remove products from cart
+- 💰 Dynamic cart total
+- 💳 Complete frontend checkout flow
+- 📱 Responsive design
+- 🎨 Technology-focused storefront UI
+- ⚡ JavaScript-driven interactions
+- 📄 Multi-page frontend structure
 
-## 🛠️ Technologies
+## 🛠️ Tech Stack
 
-* HTML5
-* CSS3
-* JavaScript (ES6+)
-* Responsive Web Design
-* DOM Manipulation
+- **HTML5** — semantic page structure
+- **CSS3** — responsive layout and visual styling
+- **JavaScript (ES6+)** — dynamic rendering, search, cart logic, and checkout interactions
+- **Vercel** — deployment and hosting
+- **Git & GitHub** — version control
 
 ## 🛒 Shopping Cart
 
-The shopping cart allows users to:
-
-* Add products
-* Remove products
-* Change quantities
-* View the updated total price
-
-Cart information is dynamically managed using JavaScript.
-
-## 🔎 Product Search
-
-Users can search through the available products using the search functionality.
-
-The product list updates dynamically based on the user's search query.
-
-## 💳 Checkout Flow
-
-The project includes a complete frontend checkout flow.
+The cart is handled entirely on the frontend with JavaScript.
 
 Users can:
 
-1. Review their cart
-2. Adjust product quantities
-3. Continue to checkout
-4. Enter checkout information
-5. Review their order
+- Add products
+- Remove products
+- Increase or decrease quantities
+- See updated prices and totals
+- Continue from the cart to checkout
 
-The checkout process is currently frontend-only and does not process real payments.
+## 🔎 Product Search
+
+Products are rendered dynamically from JavaScript data and can be searched through the storefront.
+
+The product interface updates based on the user's search query without requiring a page reload.
+
+## 💳 Checkout Flow
+
+The project includes a complete frontend checkout experience:
+
+1. Browse products
+2. Add products to the cart
+3. Review the cart
+4. Adjust quantities
+5. Continue to checkout
+6. Enter checkout information
+7. Review the order
+
+> **Note:** This is a frontend portfolio project. It does not process real payments or create real orders.
 
 ## 📱 Responsive Design
 
-The website is designed for different screen sizes:
+The interface is designed to work across:
 
-* Desktop
-* Tablet
-* Mobile
+- Desktop
+- Tablet
+- Mobile
 
-The layout, product grid and navigation adapt to smaller screens.
+The navigation, product grid, cart layout, and checkout pages adapt to smaller screen sizes.
 
 ## 📂 Project Structure
 
-```text id="7v8v1r"
+```text
 E-commerce-project/
 │
 ├── index.html
@@ -81,47 +88,42 @@ E-commerce-project/
 └── README.md
 ```
 
-## 🎯 Project Purpose
+## 🧠 What I Practiced
 
-This project was created to practice building a more complete frontend application instead of a simple static webpage.
+This project helped me strengthen practical frontend development skills, including:
 
-The main focus was on:
+- Working with arrays of product objects
+- Dynamic DOM rendering
+- JavaScript event handling
+- Search and filtering
+- Cart state management
+- Quantity updates
+- Price calculations
+- Multi-page frontend architecture
+- Responsive CSS
+- Building a complete user flow
+- Git and GitHub workflow
+- Deploying a static frontend application with Vercel
 
-* Dynamic rendering
-* JavaScript logic
-* Product management
-* Search functionality
-* Shopping cart state
-* Checkout flow
-* Responsive UI
+## 🎯 Project Goals
 
-## 💡 What I Practiced
+The goal was to move beyond a simple static webpage and build a more complete frontend application that demonstrates real-world UI and JavaScript interactions.
 
-Through this project I practiced:
+The project was designed as a portfolio piece to demonstrate practical frontend development skills.
 
-* Working with arrays of product objects
-* Dynamic DOM rendering
-* JavaScript event handling
-* Search and filtering
-* Cart management
-* Quantity updates
-* Price calculations
-* Multi-page frontend structure
-* Responsive layouts
-* Building a complete user flow
+## 🔮 Future Improvements
 
-## 🚀 Future Improvements
+Possible next steps include:
 
-Possible future improvements include:
-
-* Connecting products to a REST API
-* Adding a backend
-* User authentication
-* Persistent shopping cart
-* Product detail pages
-* Real payment integration
-* Order history
-* Admin dashboard integration
+- REST API integration
+- Backend integration
+- User authentication
+- Persistent cart with localStorage or a backend
+- Product detail pages
+- Real payment integration
+- Order history
+- Admin dashboard integration
+- Migration to React
 
 ## 👨‍💻 Author
 
@@ -129,6 +131,9 @@ Possible future improvements include:
 
 Junior Frontend Developer
 
-GitHub: https://github.com/mohsen-goli
+- **GitHub:** [mohsen-goli](https://github.com/mohsen-goli)
+- **LinkedIn:** [Mohsen Golzad](https://www.linkedin.com/in/mohsen-golzad-a5495319b)
 
-LinkedIn: https://www.linkedin.com/in/mohsen-golzad-a5495319b
+---
+
+⭐ If you find this project interesting, feel free to explore the code and the live demo.
